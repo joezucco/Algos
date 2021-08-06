@@ -72,15 +72,37 @@ const people = [
 
 // refactor
 
-const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
+const fifteen = inventors.filter(
+  (inventor) => inventor.year >= 1500 && inventor.year < 1600
+);
 
 console.table(fifteen);
 
 // Array.prototype.map()
+// .map takes in an array but returns a NEW array of the same length
 // 2. Give us an array of the inventors first and last names
+const fullNames = inventors.map(
+  (inventor) => `${inventor.first} ${inventor.last}`
+);
+
+console.log(fullNames);
 
 // Array.prototype.sort()
+// .sort -- you have two items, and you're asked to sort just those two items
 // 3. Sort the inventors by birthdate, oldest to youngest
+const ordered = inventors.sort(function (a, b) {
+  if (a.year > b.year) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+
+// refactor to ternary/one line
+
+const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1)
+
+console.log(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
