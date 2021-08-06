@@ -115,7 +115,7 @@ const totalYears = inventors.reduce((total, inventor) => {
 
 // 5. Sort the inventors by years lived
 const oldest = inventors.sort((a, b) => {
-    // create some variables to be used in our if statement
+  // create some variables to be used in our if statement
   const lastGuy = a.passed - a.year;
   const nextGuy = b.passed - b.year;
   return lastGuy > nextGuy ? -1 : 1;
@@ -124,6 +124,10 @@ console.log(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+const category = document.querySelector('.mw-category')
+const links = [...category.querySelectorAll('a')]
+// convert list of links to a list of names then filter list of names for only ones that include 'de'
+const de = links.map(link => link.textContent)
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
