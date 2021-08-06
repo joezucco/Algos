@@ -64,11 +64,16 @@ const people = [
 // Array.prototype.filter()
 // We give the .filter method a CALLBACK FUNCTION -- a function passed as an argument, which is then invoked inside the outerfunction to complete some kind of routine or action.
 // 1. Filter the list of inventors for those who were born in the 1500's
-const fifteen = inventors.filter(function (inventor) {
-    if (inventor.year >= 1500 && inventor.year <= 1599) {
-        return true // that means we keep it!
-    }
-})
+// const fifteen = inventors.filter(function (inventor) {
+//   if (inventor.year >= 1500 && inventor.year <= 1599) {
+//     return true; // that means we keep it!
+//   }
+// });
+
+// refactor
+
+const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
+
 console.table(fifteen);
 
 // Array.prototype.map()
