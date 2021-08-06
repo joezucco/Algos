@@ -90,22 +90,24 @@ console.log(fullNames);
 // Array.prototype.sort()
 // .sort -- you have two items, and you're asked to sort just those two items
 // 3. Sort the inventors by birthdate, oldest to youngest
-const ordered = inventors.sort(function (a, b) {
-  if (a.year > b.year) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
+// const ordered = inventors.sort(function (a, b) {
+//   if (a.year > b.year) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
 
 // refactor to ternary/one line
+const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
 
-const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1)
-
-console.log(ordered);
+// console.table(ordered);
 
 // Array.prototype.reduce()
+// .reduce -- allows you to build something on every single item in array
 // 4. How many years did all the inventors live all together?
+const totalYears 
+
 
 // 5. Sort the inventors by years lived
 
