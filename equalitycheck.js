@@ -11,4 +11,3 @@
 
 // Implement a function that returns true if the parameters are equal, and false if they are not.
 
-
