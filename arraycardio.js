@@ -137,9 +137,10 @@ const alpha = people.sort((lastOne, nextOne) => {
     const [bLast, bFirst] = nextOne.split(", ");
     return aLast > bLast ? 1 : -1
 })
-console.log(alpha);
+// console.log(alpha);
 
 // 8. Reduce Exercise
+// **try again at later date
 // Sum up the instances of each of these
 const data = [
   "car",
@@ -157,3 +158,11 @@ const data = [
   "car",
   "truck",
 ];
+
+const transportation = data.reduce((object, item) => {
+    if (!obect[item]) {
+        object[item] = 0
+    }
+    object[item]++
+    return object
+}, {})
