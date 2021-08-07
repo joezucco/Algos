@@ -209,7 +209,20 @@ const comments = [
 // Find is like filter, but instead returns just the one you are looking for
 // find the comment with the ID of 823423
 const comment = comments.find((comment) => comment.id === 823423);
-console.log(comment);
-// Array.prototype.findIndex()
+// console.log(comment);
+
+// Array.prototype.findIndex() -- find where something is inside of the array
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+// (in order to delete something in an array you need to know where it actually is)
+const index = comments.findIndex((comment) => comment.id === 823423);
+// console.log(index);
+
+// delete it
+// comments.splice(index, 1)
+// console.table(comments);
+
+// create a new array of the updated comments
+const newComments = [...comments.slice(0, index), ...comments.slice(index + 1)];
+
+console.table(newComments);
