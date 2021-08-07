@@ -166,3 +166,7 @@ const transportation = data.reduce((object, item) => {
     object[item]++
     return object
 }, {})
+
+////////////////////////////////////
+// JS Array Cardio Practice - Day 2
+///////////////////////////////////
